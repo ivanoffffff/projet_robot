@@ -1,10 +1,11 @@
-// Variables
-$primary-color: #3498db;
-$secondary-color: #2ecc71;
-$dark-color: #2c3e50;
-$light-color: #ecf0f1;
-$danger-color: #e74c3c;
-$warning-color: #f39c12;
+// Variables - Palette orientée orange
+$primary-color: #ff7700; // Orange principal
+$secondary-color: #ff9933; // Orange secondaire plus clair
+$accent-color: #e65c00; // Orange foncé pour contraste
+$dark-color: #33302e; // Gris très foncé avec une teinte chaude
+$light-color: #fff5eb; // Blanc cassé avec une teinte orange
+$danger-color: #e74c3c; // Rouge pour les alertes/erreurs
+$warning-color: #ffc107; // Jaune orangé pour avertissements
 
 // Reset
 * {
@@ -75,10 +76,12 @@ header {
 .hero {
   padding: 4rem 0;
   text-align: center;
+  background-color: rgba($primary-color, 0.05);
 
   h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    color: $accent-color;
   }
 
   p {
@@ -118,6 +121,7 @@ header {
   .section-title {
     text-align: center;
     margin-bottom: 3rem;
+    color: $accent-color;
   }
 
   .features-grid {
@@ -132,9 +136,11 @@ header {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s;
+    border-top: 3px solid $secondary-color;
 
     &:hover {
       transform: translateY(-5px);
+      border-top-color: $primary-color;
     }
 
     .feature-icon {
@@ -145,6 +151,7 @@ header {
 
     h3 {
       margin-bottom: 1rem;
+      color: $accent-color;
     }
 
     p {
@@ -156,12 +163,20 @@ header {
 // Robot Status Section
 .robot-status {
   padding: 4rem 0;
+  background-color: rgba($secondary-color, 0.05);
+
+  .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: $accent-color;
+  }
 
   .status-container {
     background-color: white;
     border-radius: 10px;
     padding: 2rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid $secondary-color;
   }
 
   .status-indicator {
@@ -177,7 +192,7 @@ header {
     margin-right: 10px;
 
     &.online {
-      background-color: $secondary-color;
+      background-color: #4caf50; // Vert pour "en ligne"
     }
 
     &.offline {
@@ -202,6 +217,7 @@ footer {
   color: white;
   padding: 2rem 0;
   text-align: center;
+  border-top: 3px solid $primary-color;
 }
 
 // Media Queries
