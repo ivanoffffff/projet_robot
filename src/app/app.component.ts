@@ -8,7 +8,7 @@ import {FeatureCardComponent} from "./accueil/features/feature-card/feature-card
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NavbarComponent, FooterComponent, FeaturesComponent],
+  imports: [NavbarComponent, FooterComponent, FeaturesComponent,RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

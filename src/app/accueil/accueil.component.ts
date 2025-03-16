@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FeaturesComponent } from './features/features.component';
-import { RobotStatusComponent } from "../control/robot-status/robot-status.component";
+import { RobotStatusComponent } from '../robot-status/robot-status.component';
 import {NavbarComponent} from "../navbar/navbar.component";
 
 @Component({
