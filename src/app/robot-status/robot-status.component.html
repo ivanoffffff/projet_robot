@@ -1,0 +1,13 @@
+<div class="container">
+  <h2 class="section-title">État du robot</h2>
+  <div class="status-container">
+    <div class="status-indicator">
+      <div class="indicator" [ngClass]="{'online': isConnected, 'offline': !isConnected}"></div>
+      <p>{{ isConnected ? 'Robot connecté' : 'Robot déconnecté' }}</p>
+    </div>
+    <p>{{ statusMessage }}</p>
+    <a (click)="toggleConnection()" class="btn btn-control">
+      {{ isConnected ? 'Déconnecter le robot' : 'Connecter le robot' }}
+    </a>
+  </div>
+</div>
