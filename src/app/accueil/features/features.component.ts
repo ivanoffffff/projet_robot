@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FeatureCardComponent } from './feature-card/feature-card.component';
+import {RouterLink} from "@angular/router";
 
 interface Feature {
   icon: string;
@@ -13,7 +14,7 @@ interface Feature {
   templateUrl: './features.component.html',
   styleUrls: ['./features.component.scss'],
   standalone: true,
-  imports: [CommonModule, FeatureCardComponent]
+  imports: [CommonModule, FeatureCardComponent,RouterLink],
 })
 export class FeaturesComponent {
   features: Feature[] = [
