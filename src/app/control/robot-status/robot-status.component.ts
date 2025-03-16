@@ -13,8 +13,8 @@ export class RobotStatusComponent {
 
   get statusMessage(): string {
     return this.isConnected
-      ? 'Votre robot est connecté. Vous pouvez maintenant le contrôler et recevoir des données.'
-      : 'Connectez votre robot pour commencer à recevoir des données et le contrôler à distance.';
+      ? 'Votre robot est connecté. Vous pouvez maintenant le contrôler'
+      : 'Connectez votre robot pour commencer à le contrôler à distance.';
   }
 
   toggleConnection(): void {

@@ -15,4 +15,5 @@ export class FeatureCardComponent {
   @Input() icon: string = '';
   @Input() title: string = '';
   @Input() description: string = '';
+  @Input() route: string = '';
 }
