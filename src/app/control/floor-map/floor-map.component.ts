@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {NgClass} from "@angular/common";
+import {NgClass, NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-floor-map',
   standalone : true,
-  imports : [NgClass],
+  imports: [NgClass, NgIf],
   templateUrl: './floor-map.component.html',
   styleUrls: ['./floor-map.component.scss']
 })

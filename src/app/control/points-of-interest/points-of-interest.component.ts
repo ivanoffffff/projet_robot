@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import {FormsModule} from "@angular/forms";
+import {NgForOf} from "@angular/common";
 
 @Component({
   selector: 'app-points-of-interest',
   templateUrl: './points-of-interest.component.html',
   standalone: true,
   imports: [
-    FormsModule
+    FormsModule,
+    NgForOf
   ],
   styleUrls: ['./points-of-interest.component.scss']
 })
