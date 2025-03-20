@@ -1,0 +1,28 @@
+<div class="card mb-3">
+  <div class="card-header bg-light">
+    <h5 class="mb-0">Contrôle directionnel</h5>
+  </div>
+  <div class="card-body">
+    <div class="direction-pad">
+      <div class="empty"></div>
+      <button class="btn btn-primary" (click)="moveRobot('avant')">
+        <i class="bi bi-arrow-up"></i>
+      </button>
+      <div class="empty"></div>
+      <button class="btn btn-primary" (click)="moveRobot('gauche')">
+        <i class="bi bi-arrow-left"></i>
+      </button>
+      <button class="btn btn-stop" (click)="stopMovement()">
+        <i class="bi bi-app"></i>
+      </button>
+      <button class="btn btn-primary" (click)="moveRobot('droite')">
+        <i class="bi bi-arrow-right"></i>
+      </button>
+      <div class="empty"></div>
+      <button class="btn btn-primary" (click)="moveRobot('arrière')">
+        <i class="bi bi-arrow-down"></i>
+      </button>
+      <div class="empty"></div>
+    </div>
+  </div>
+</div>

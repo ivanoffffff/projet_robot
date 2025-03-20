@@ -1,0 +1,22 @@
+<div class="card mb-3">
+  <div class="card-header bg-light">
+    <h5 class="mb-0">Contrôle de vitesse</h5>
+  </div>
+  <div class="card-body">
+    <div class="mb-2 d-flex justify-content-between">
+      <span>Vitesse: {{ speed }}%</span>
+      <div>
+        <span class="me-2">Lent</span>
+        <span>Rapide</span>
+      </div>
+    </div>
+    <input type="range" class="form-range" min="0" [max]="maxSpeed" [value]="speed" (input)="updateSpeed($event)">
+    <div class="progress mt-2" style="height: 15px;">
+      <div class="progress-bar" [ngClass]="{
+        'bg-success': speed < 33,
+        'bg-warning': speed >= 33 && speed < 66,
+        'bg-danger': speed >= 66
+      }" [style.width.%]="speed"></div>
+    </div>
+  </div>
+</div>

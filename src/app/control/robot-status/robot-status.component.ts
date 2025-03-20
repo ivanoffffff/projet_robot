@@ -1,24 +1,26 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
+import {NgClass} from "@angular/common";
 
 @Component({
   selector: 'app-robot-status',
   templateUrl: './robot-status.component.html',
-  styleUrls: ['./robot-status.component.scss'],
   standalone: true,
-  imports: [CommonModule]
+  imports: [NgClass],
+  styleUrls: ['./robot-status.component.scss']
 })
-export class RobotStatusComponent {
-  isConnected: boolean = false;
+export class RobotStatusComponent implements OnInit {
+  isConnected: boolean = true;
+  robotState: string = 'En service';
+  position: string = 'Hall d\'entrée';
+  batteryLevel: number = 85;
 
-  get statusMessage(): string {
-    return this.isConnected
-      ? 'Votre robot est connecté. Vous pouvez maintenant le contrôler'
-      : 'Connectez votre robot pour commencer à le contrôler à distance.';
+  constructor() { }
+
+  ngOnInit(): void {
   }
 
   toggleConnection(): void {
     this.isConnected = !this.isConnected;
-    // Ici vous pourriez appeler un service pour établir une connexion réelle
+    this.robotState = this.isConnected ? 'En service' : 'Hors service';
   }
 }
