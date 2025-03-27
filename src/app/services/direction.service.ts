@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class DirectionService {
-  private apiUrl = 'http://localhost:5000/direction';
+  private apiUrl = 'http://192.168.1.39:5000/direction';
 
   constructor(private http: HttpClient) { }
 
