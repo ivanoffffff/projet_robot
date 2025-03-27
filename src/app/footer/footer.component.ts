@@ -10,6 +10,5 @@ import { Component } from '@angular/core';
 export class FooterComponent {
   currentYear: number = new Date().getFullYear();
   version: string = '1.0';
-  lastUpdate: string = 'Mars 2025';
-
+  lastUpdate: string = new Date().toLocaleDateString();
 }

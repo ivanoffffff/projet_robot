@@ -12,20 +12,15 @@ import {SpeedService} from "../../services/speed.service";
   ],
   styleUrls: ['./speed-control.component.scss']
 })
-export class SpeedControlComponent implements OnInit {
+export class SpeedControlComponent {
   private readonly speedService = inject(SpeedService);
   speed: number = 50;
   maxSpeed: number = 100;
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
   updateSpeed(event: any) {
     this.speed = event.target.value;
     this.speedService.sendSpeed(this.speed).subscribe(
-      response => console.log('Direction envoyée:', response),
+      response => console.log('Vitesse envoyée:', response),
       error => console.error('Erreur:', error)
     );
     console.log(`Vitesse ajustée à: ${this.speed}%`);

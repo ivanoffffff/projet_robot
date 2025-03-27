@@ -23,8 +23,8 @@
 <!--  <a class="nav-item nav-link ms-3" routerLink="/settings">Paramètres</a>-->
 <!--</nav>-->
 <nav class="navbar navbar-light navbar-expand bg-light custom-navbar ps-5">
-  <img src="assets/images/LogoAimigos.png" alt="Logo" class="navbar-logo me-2">
-  <a class="navbar-brand">{{ title | titlecase }}</a>
+  <img src="assets/images/LogoAimigos.png" alt="Logo" class="navbar-logo me-2" routerLink="/">
+  <a class="navbar-brand" routerLink="/">{{ title | titlecase }}</a>
 
   <!-- Liens de navigation - visibles seulement quand on n'est pas sur la page de connexion -->
   <a class="nav-item nav-link ms-2" routerLink="/" *ngIf="!isConnectionPage()">Accueil</a>
