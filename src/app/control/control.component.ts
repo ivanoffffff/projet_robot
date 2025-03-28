@@ -4,6 +4,7 @@ import {PointsOfInterestComponent} from "./points-of-interest/points-of-interest
 import {DirectionControlComponent} from "./direction-control/direction-control.component";
 import {SpeedControlComponent} from "./speed-control/speed-control.component";
 import {FloorMapComponent} from "./floor-map/floor-map.component";
+import {CameraComponent} from "./camera/camera.component";
 
 @Component({
   selector: 'app-control',
@@ -13,7 +14,7 @@ import {FloorMapComponent} from "./floor-map/floor-map.component";
     PointsOfInterestComponent,
     DirectionControlComponent,
     SpeedControlComponent,
-    FloorMapComponent,
+    CameraComponent,
   ],
   templateUrl: './control.component.html',
   styleUrl: './control.component.scss'

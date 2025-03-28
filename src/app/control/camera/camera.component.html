@@ -1,0 +1,41 @@
+<div class="camera-container">
+  <!-- Message d'erreur -->
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+
+  <!-- Élément vidéo -->
+  <video
+    #videoElement
+    autoplay
+    playsinline
+    class="camera-video"
+    [class.active]="isCameraActive">
+  </video>
+
+  <!-- Conteneur des contrôles -->
+  <div class="camera-controls">
+    <!-- Bouton Démarrer -->
+    <button
+      (click)="startCamera()"
+      [disabled]="isCameraActive"
+      class="btn btn-start">
+      Démarrer la caméra
+    </button>
+
+    <!-- Bouton Arrêter -->
+    <button
+      (click)="stopCamera()"
+      [disabled]="!isCameraActive"
+      class="btn btn-stop">
+      Arrêter la caméra
+    </button>
+  </div>
+
+  <!-- Indicateur de statut -->
+  <div class="camera-status">
+    <span [class.active]="isCameraActive">
+      {{ isCameraActive ? 'Caméra active' : 'Caméra inactive' }}
+    </span>
+  </div>
+</div>
