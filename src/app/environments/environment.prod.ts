@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'http://192.168.1.39:5000/direction'
+  apiUrl: 'https://aecc-85-190-234-40.ngrok-free.app/direction'
 };
