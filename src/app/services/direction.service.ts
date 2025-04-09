@@ -14,7 +14,7 @@ export class DirectionService {
   constructor(private http: HttpClient) {
     // Pour le déploiement, vous pourriez vouloir configurer ceci dans votre environment.ts
     // Ceci est un exemple, vous devrez adapter selon votre structure
-    this.apiUrl = 'https://aecc-85-190-234-40.ngrok-free.app/direction';
+    this.apiUrl = 'http://192.168.1.39:5000/direction';
   }
 
   // Options HTTP complètes

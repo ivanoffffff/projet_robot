@@ -3,12 +3,10 @@
     <h5 class="mb-0">Contrôle de vitesse</h5>
   </div>
   <div class="card-body">
-    <div class="mb-2 d-flex justify-content-between">
-      <span>Vitesse: {{ speed }}%</span>
-      <div>
-        <span class="me-2">Lent</span>
-        <span>Rapide</span>
-      </div>
+    <div class="d-flex justify-content-between mb-1">
+      <span class="small text-muted">Lent</span>
+      <span>Vitesse: <strong>{{ speed }}%</strong></span>
+      <span class="small text-muted">Rapide</span>
     </div>
     <input type="range" class="form-range" min="0" [max]="maxSpeed" [value]="speed" (input)="updateSpeed($event)">
     <div class="progress mt-2" style="height: 15px;">

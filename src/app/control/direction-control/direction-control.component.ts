@@ -9,6 +9,7 @@ import {DirectionService} from "../../services/direction.service";
   styleUrls: ['./direction-control.component.scss']
 })
 export class DirectionControlComponent implements OnInit {
+
   private readonly directionService = inject(DirectionService);
   ngOnInit(): void {
   }
