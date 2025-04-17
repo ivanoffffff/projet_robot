@@ -5,7 +5,7 @@ import {HttpClient} from "@angular/common/http";
   providedIn: 'root'
 })
 export class SpeedService {
-  private apiUrl = 'http://192.168.1.39:5000/speed';
+  private apiUrl = 'http://192.168.1.40:5000/speed';
 
   constructor(private http: HttpClient) { }
 

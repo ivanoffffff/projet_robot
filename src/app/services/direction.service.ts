@@ -14,7 +14,7 @@ export class DirectionService {
   constructor(private http: HttpClient) {
     // Pour le déploiement, vous pourriez vouloir configurer ceci dans votre environment.ts
     // Ceci est un exemple, vous devrez adapter selon votre structure
-    this.apiUrl = 'http://192.168.1.39:5000/direction';
+    this.apiUrl = 'http://192.168.1.40:5000/direction';
   }
 
   // Options HTTP complètes
