@@ -4,6 +4,7 @@ import { Observable, throwError, of } from 'rxjs';
 import { catchError, retry, timeout } from 'rxjs/operators';
 import { environment } from '../environments/environment';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -14,7 +15,8 @@ export class DirectionService {
   constructor(private http: HttpClient) {
     // Pour le déploiement, vous pourriez vouloir configurer ceci dans votre environment.ts
     // Ceci est un exemple, vous devrez adapter selon votre structure
-    this.apiUrl = 'http://192.168.1.40:5000/direction';
+    //this.apiUrl = 'http://192.168.1.40:5000/direction';
+    this.apiUrl = environment.apiUrl;
   }
 
   // Options HTTP complètes
