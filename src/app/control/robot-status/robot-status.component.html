@@ -6,17 +6,21 @@
     <div class="row">
       <div class="col-md-4">
         <div class="d-flex align-items-center mb-2">
-          <div class="status-indicator" [ngClass]="{'status-online': isConnected, 'status-offline': !isConnected}"></div>
+          <div class="status-indicator"
+               [ngClass]="{'status-online': isConnected, 'status-offline': !isConnected}"></div>
           <span>{{ isConnected ? 'Robot connecté' : 'Robot déconnecté' }}</span>
         </div>
-        <button class="btn btn-sm" [disabled]="isSending" [ngClass]="{'btn-outline-danger': isConnected, 'btn-outline-success': !isConnected}" (click)="toggleConnection()">
+        <button class="btn btn-sm" [disabled]="isSending"
+                [ngClass]="{'btn-outline-danger': isConnected, 'btn-outline-success': !isConnected}"
+                (click)="toggleConnection()">
           <span *ngIf="isSending" class="spinner-border spinner-border-sm me-1"></span>
           {{ isConnected ? 'Déconnecter' : 'Connecter' }}
         </button>
-<!--        <p class="mb-2">État: <span class="fw-bold">{{ robotState }}</span></p>-->
-<!--        <button class="btn btn-sm" [ngClass]="{'btn-outline-danger': isConnected, 'btn-outline-success': !isConnected}" (click)="toggleConnection()">-->
-<!--          {{ isConnected ? 'Déconnecter' : 'Connecter' }}-->
-<!--        </button>-->
+
+        <!-- Message d'erreur -->
+        <div *ngIf="errorMessage" class="alert alert-danger mt-2 small">
+          {{ errorMessage }}
+        </div>
       </div>
       <div class="col-md-8">
         <div class="row">
