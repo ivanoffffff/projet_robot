@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 import {FormsModule} from "@angular/forms";
 import {NgForOf} from "@angular/common";
+import {Point_of_interestService} from "../../services/point_of_interest.service";
 
 @Component({
   selector: 'app-points-of-interest',
@@ -13,7 +14,10 @@ import {NgForOf} from "@angular/common";
   styleUrls: ['./points-of-interest.component.scss']
 })
 export class PointsOfInterestComponent implements OnInit {
-  points: string[] = ['Exposition A', 'Exposition B', 'Salle conférence', 'Cafétéria'];
+
+  private readonly pointService = inject(Point_of_interestService);
+
+  points: string[] = ['P217', 'A201', 'B207', 'P212'];
   newPoint: string = '';
 
   constructor() { }
@@ -37,4 +41,14 @@ export class PointsOfInterestComponent implements OnInit {
       this.newPoint = '';
     }
   }
+
+  onPointClick(point: string) {
+    console.log(`Navigation vers: ${point}`);
+    this.pointService.sendPoint(point).subscribe(
+      response => console.log('Salle envoyée:', response),
+      error => console.error('Erreur:', error)
+    );
+  }
+
+
 }

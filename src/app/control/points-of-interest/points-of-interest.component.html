@@ -11,7 +11,7 @@
       </div>
 
       <div class="col-6 mb-2" *ngFor="let point of points">
-        <button class="btn btn-outline-primary w-100" (click)="goToPoint(point)">{{ point }}</button>
+        <button class="btn btn-outline-primary w-100" (click)="onPointClick(point)">{{ point }}</button>
       </div>
     </div>
 
