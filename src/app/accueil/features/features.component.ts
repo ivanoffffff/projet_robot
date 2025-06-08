@@ -25,17 +25,17 @@ export class FeaturesComponent {
       description: 'Interface simple et réactive pour piloter votre robot avec précision.',
       route: '/control'
     },
-    {
-      icon: '📊',
-      title: 'Analyse de données',
-      description: 'Visualisez et analysez les données collectées par votre robot.',
-      route: '/data'
-    },
-    {
-      icon: '🔄',
-      title: 'Temps réel',
-      description: 'Recevez les informations de votre robot instantanément sans délai.',
-      route: '/dashboard'
-    }
+    // {
+    //   icon: '📊',
+    //   title: 'Analyse de données',
+    //   description: 'Visualisez et analysez les données collectées par votre robot.',
+    //   route: '/data'
+    // },
+    // {
+    //   icon: '🔄',
+    //   title: 'Temps réel',
+    //   description: 'Recevez les informations de votre robot instantanément sans délai.',
+    //   route: '/dashboard'
+    // }
   ];
 }
